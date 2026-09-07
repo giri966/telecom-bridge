@@ -1,0 +1,29 @@
+services:
+  simulator:
+    build:
+      context: .
+      dockerfile: diameter-simulator/Dockerfile
+    container_name: diameter-simulator
+    environment:
+      SIM_MIN_DELAY_MS: "50"
+      SIM_MAX_DELAY_MS: "100"
+    ports:
+      - "3868:3868"
+
+  gateway:
+    build:
+      context: .
+      dockerfile: gateway/Dockerfile
+    container_name: telecom-bridge-gateway
+    depends_on:
+      - simulator
+    environment:
+      DIAMETER_HOST: simulator
+      DIAMETER_PORT: "3868"
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "sh", "-c", "wget -qO- http://localhost:8080/actuator/health | grep -q '\"status\":\"UP\"'"]
+      interval: 10s
+      timeout: 3s
+      retries: 5

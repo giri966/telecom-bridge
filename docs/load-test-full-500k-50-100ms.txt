@@ -1,0 +1,43 @@
+==================== Telecom-Bridge load test report ====================
+Finished        : 2026-09-07 08:53:49
+Endpoint        : http://localhost:8081/api/v1/charge
+Target          : 100 TPS, 500000 measured requests (+500 warm-up)
+Elapsed         : 5005.1 s
+Achieved rate   : 100.0 req/s
+
+Completed       : 500000 / 500000
+  HTTP 200      : 500000
+  HTTP 422      : 0
+  HTTP 5xx      : 0
+  HTTP other    : 0
+  transport err : 0
+
+Latency (ms)    : p50=84.4  p90=102.8  p95=108.3  p99=116.8  p99.9=118.8  max=186.6  mean=85.4
+Breakdown of the end-to-end figure above, per request:
+  peer round trip (CCR->CCA, dominated by the simulator's own delay)
+                : p50=82.0  p90=100.0  p95=106.0  p99=114.0  max=143.0  mean=83.2 ms
+  gateway + client overhead on top of that (HTTP, JSON, sockets)
+                : p50=2.2  p90=2.8  p95=3.1  p99=4.2  max=98.6  mean=2.2 ms
+
+Gateway heap    : first=29.0 MB  last=27.7 MB  min=23.2 MB  max=67.6 MB  (166 samples)
+Gateway internals (from /actuator/prometheus, sliding-window estimates):
+  unmatched answers = 0.0
+  pending now = 0.0
+  CCR->CCA p50 = 81.8 ms
+  CCR->CCA p95 = 111.1 ms
+  CCR->CCA p99 = 115.3 ms
+  CCR->CCA count = 500500
+  timeouts = 0.0
+
+Constraint p95 < 100 ms : VIOLATED
+  Note: the peer round trip alone is p95=106.0 ms. A simulator delay drawn uniformly from [50, 100] ms has a p95 of
+  97.5 ms by construction, so no gateway can bring the end-to-end p95 under 100 ms
+  against that peer. Re-run the simulator with --max-delay=80 to measure the
+  gateway against a peer that leaves headroom; the overhead row above is the
+  part of the latency this service is actually responsible for.
+Constraint errors == 0  : OK
+Constraint all completed: OK
+Constraint run continuous: OK
+
+RESULT: FAIL
+=========================================================================

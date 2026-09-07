@@ -1,0 +1,199 @@
+=== full-500k-50-100ms: simulator delay 50-100 ms, 500000 requests at 100 TPS ===
+07:30:24.597 INFO  Target http://localhost:8081/api/v1/charge at 100 TPS: 500 warm-up + 500000 measured requests (83 min), timeout 5000 ms, p95 limit 100 ms
+07:30:54.715 INFO  t=30s sent=3010 done=3002 inflight=8 | last 30s: 99.8 req/s p50=87.423 p95=112.575 p99=119.999 max=140.671 ms errors=0 | gateway heap 29.0 MB
+07:31:24.623 INFO  t=60s sent=6002 done=5994 inflight=8 | last 30s: 100.0 req/s p50=85.887 p95=110.847 p99=118.207 max=131.711 ms errors=0 | gateway heap 53.1 MB
+07:31:54.628 INFO  t=90s sent=9002 done=8994 inflight=8 | last 30s: 100.0 req/s p50=85.567 p95=110.975 p99=118.783 max=186.623 ms errors=0 | gateway heap 25.1 MB
+07:32:24.624 INFO  t=120s sent=12002 done=11994 inflight=8 | last 30s: 100.0 req/s p50=84.735 p95=107.647 p99=116.479 max=157.439 ms errors=0 | gateway heap 41.1 MB
+07:32:54.621 INFO  t=150s sent=15002 done=14995 inflight=7 | last 30s: 99.9 req/s p50=84.479 p95=109.695 p99=115.583 max=123.455 ms errors=0 | gateway heap 55.1 MB
+07:33:24.616 INFO  t=180s sent=18001 done=17994 inflight=7 | last 30s: 100.0 req/s p50=84.671 p95=109.311 p99=116.735 max=145.663 ms errors=0 | gateway heap 25.1 MB
+07:33:54.620 INFO  t=210s sent=21002 done=20993 inflight=9 | last 30s: 100.0 req/s p50=83.519 p95=110.655 p99=115.647 max=118.719 ms errors=0 | gateway heap 39.2 MB
+07:34:24.621 INFO  t=240s sent=24002 done=23993 inflight=9 | last 30s: 100.1 req/s p50=83.903 p95=108.927 p99=115.775 max=120.767 ms errors=0 | gateway heap 53.2 MB
+07:34:54.623 INFO  t=270s sent=27002 done=26993 inflight=9 | last 30s: 100.0 req/s p50=83.967 p95=109.823 p99=116.159 max=134.783 ms errors=0 | gateway heap 23.2 MB
+07:35:24.615 INFO  t=300s sent=30001 done=29993 inflight=8 | last 30s: 100.0 req/s p50=84.607 p95=108.479 p99=115.135 max=120.575 ms errors=0 | gateway heap 39.2 MB
+07:35:54.612 INFO  t=330s sent=33001 done=32991 inflight=10 | last 30s: 100.0 req/s p50=84.159 p95=109.951 p99=116.287 max=133.887 ms errors=0 | gateway heap 53.2 MB
+07:36:24.615 INFO  t=360s sent=36001 done=35992 inflight=9 | last 30s: 100.0 req/s p50=84.671 p95=106.239 p99=116.863 max=121.279 ms errors=0 | gateway heap 67.2 MB
+07:36:54.619 INFO  t=390s sent=39002 done=38994 inflight=8 | last 30s: 100.0 req/s p50=84.863 p95=108.223 p99=117.183 max=119.359 ms errors=0 | gateway heap 37.2 MB
+07:37:24.612 INFO  t=420s sent=42001 done=41994 inflight=7 | last 30s: 100.0 req/s p50=84.927 p95=106.495 p99=116.159 max=119.615 ms errors=0 | gateway heap 53.3 MB
+07:37:54.622 INFO  t=450s sent=45002 done=44994 inflight=8 | last 30s: 100.1 req/s p50=84.607 p95=109.247 p99=116.799 max=119.615 ms errors=0 | gateway heap 67.3 MB
+07:38:24.617 INFO  t=480s sent=48002 done=47993 inflight=9 | last 30s: 100.0 req/s p50=84.927 p95=107.775 p99=117.119 max=119.743 ms errors=0 | gateway heap 37.2 MB
+07:38:54.615 INFO  t=510s sent=51001 done=50994 inflight=7 | last 30s: 100.0 req/s p50=84.671 p95=109.439 p99=116.735 max=119.103 ms errors=0 | gateway heap 51.2 MB
+07:39:24.616 INFO  t=540s sent=54001 done=53994 inflight=7 | last 30s: 100.1 req/s p50=84.863 p95=107.263 p99=116.735 max=119.615 ms errors=0 | gateway heap 67.3 MB
+07:39:54.616 INFO  t=570s sent=57001 done=56994 inflight=7 | last 30s: 100.0 req/s p50=84.223 p95=106.047 p99=116.927 max=124.735 ms errors=0 | gateway heap 35.3 MB
+07:40:24.619 INFO  t=600s sent=60002 done=59994 inflight=8 | last 30s: 100.0 req/s p50=84.863 p95=105.535 p99=116.927 max=118.911 ms errors=0 | gateway heap 49.3 MB
+07:40:54.630 INFO  t=630s sent=63003 done=62994 inflight=9 | last 30s: 100.0 req/s p50=84.607 p95=109.119 p99=117.311 max=128.639 ms errors=0 | gateway heap 65.2 MB
+07:41:24.614 INFO  t=660s sent=66001 done=65992 inflight=9 | last 30s: 99.9 req/s p50=84.607 p95=108.607 p99=116.607 max=119.423 ms errors=0 | gateway heap 35.3 MB
+07:41:54.623 INFO  t=690s sent=69002 done=68994 inflight=8 | last 30s: 100.0 req/s p50=84.991 p95=107.519 p99=116.415 max=135.679 ms errors=0 | gateway heap 49.3 MB
+07:42:24.619 INFO  t=720s sent=72002 done=71995 inflight=7 | last 30s: 100.0 req/s p50=83.263 p95=112.575 p99=115.455 max=127.103 ms errors=0 | gateway heap 63.3 MB
+07:42:54.623 INFO  t=750s sent=75002 done=74994 inflight=8 | last 30s: 100.0 req/s p50=84.607 p95=109.247 p99=117.183 max=147.967 ms errors=0 | gateway heap 33.3 MB
+07:43:24.616 INFO  t=780s sent=78001 done=77992 inflight=9 | last 30s: 100.0 req/s p50=84.543 p95=107.391 p99=116.287 max=136.063 ms errors=0 | gateway heap 49.3 MB
+07:43:54.620 INFO  t=810s sent=81002 done=80994 inflight=8 | last 30s: 100.1 req/s p50=84.735 p95=109.119 p99=116.223 max=137.471 ms errors=0 | gateway heap 63.3 MB
+07:44:24.622 INFO  t=840s sent=84002 done=83993 inflight=9 | last 30s: 100.0 req/s p50=84.863 p95=107.391 p99=116.735 max=123.711 ms errors=0 | gateway heap 33.3 MB
+07:44:54.619 INFO  t=870s sent=87001 done=86993 inflight=8 | last 30s: 100.0 req/s p50=84.031 p95=108.031 p99=116.031 max=118.975 ms errors=0 | gateway heap 47.3 MB
+07:45:24.618 INFO  t=900s sent=90002 done=89993 inflight=9 | last 30s: 100.0 req/s p50=83.071 p95=112.191 p99=114.943 max=118.783 ms errors=0 | gateway heap 61.3 MB
+07:45:54.625 INFO  t=930s sent=93002 done=92994 inflight=8 | last 30s: 100.0 req/s p50=84.223 p95=110.527 p99=116.479 max=120.191 ms errors=0 | gateway heap 31.3 MB
+07:46:24.626 INFO  t=960s sent=96002 done=95994 inflight=8 | last 30s: 100.0 req/s p50=84.351 p95=108.415 p99=116.479 max=127.103 ms errors=0 | gateway heap 47.3 MB
+07:46:54.613 INFO  t=990s sent=99001 done=98992 inflight=9 | last 30s: 100.0 req/s p50=84.927 p95=108.095 p99=116.607 max=128.255 ms errors=0 | gateway heap 61.3 MB
+07:47:24.615 INFO  t=1020s sent=102001 done=101992 inflight=9 | last 30s: 100.0 req/s p50=84.735 p95=106.943 p99=116.159 max=119.807 ms errors=0 | gateway heap 31.3 MB
+07:47:54.621 INFO  t=1050s sent=105002 done=104992 inflight=10 | last 30s: 100.0 req/s p50=84.991 p95=105.535 p99=117.247 max=119.679 ms errors=0 | gateway heap 45.3 MB
+07:48:24.617 INFO  t=1080s sent=108002 done=107992 inflight=10 | last 30s: 100.0 req/s p50=84.607 p95=106.239 p99=116.991 max=120.127 ms errors=0 | gateway heap 59.3 MB
+07:48:54.623 INFO  t=1110s sent=111002 done=110993 inflight=9 | last 30s: 100.1 req/s p50=84.927 p95=106.559 p99=117.119 max=132.095 ms errors=0 | gateway heap 29.3 MB
+07:49:24.612 INFO  t=1140s sent=114001 done=113993 inflight=8 | last 30s: 99.9 req/s p50=85.119 p95=105.727 p99=116.863 max=120.895 ms errors=0 | gateway heap 45.3 MB
+07:49:54.614 INFO  t=1170s sent=117001 done=116994 inflight=7 | last 30s: 100.1 req/s p50=84.735 p95=105.727 p99=117.055 max=119.807 ms errors=0 | gateway heap 59.3 MB
+07:50:24.621 INFO  t=1200s sent=120002 done=119994 inflight=8 | last 30s: 100.0 req/s p50=84.735 p95=108.927 p99=117.439 max=125.503 ms errors=0 | gateway heap 29.3 MB
+07:50:54.620 INFO  t=1230s sent=123002 done=122993 inflight=9 | last 30s: 100.0 req/s p50=84.991 p95=105.791 p99=116.735 max=119.871 ms errors=0 | gateway heap 43.3 MB
+07:51:24.612 INFO  t=1260s sent=126001 done=125991 inflight=10 | last 30s: 100.0 req/s p50=85.183 p95=105.855 p99=117.311 max=121.535 ms errors=0 | gateway heap 57.4 MB
+07:51:54.622 INFO  t=1290s sent=129002 done=128995 inflight=7 | last 30s: 100.0 req/s p50=84.927 p95=105.791 p99=116.607 max=120.383 ms errors=0 | gateway heap 27.3 MB
+07:52:24.612 INFO  t=1320s sent=132001 done=131991 inflight=10 | last 30s: 100.0 req/s p50=84.863 p95=107.903 p99=116.799 max=119.487 ms errors=0 | gateway heap 41.4 MB
+07:52:54.616 INFO  t=1350s sent=135001 done=134993 inflight=8 | last 30s: 100.0 req/s p50=85.119 p95=105.279 p99=116.671 max=121.343 ms errors=0 | gateway heap 57.4 MB
+07:53:24.618 INFO  t=1380s sent=138002 done=137994 inflight=8 | last 30s: 100.0 req/s p50=85.055 p95=106.751 p99=117.247 max=124.799 ms errors=0 | gateway heap 27.4 MB
+07:53:54.624 INFO  t=1410s sent=141002 done=140994 inflight=8 | last 30s: 100.0 req/s p50=85.055 p95=107.391 p99=116.543 max=119.551 ms errors=0 | gateway heap 41.3 MB
+07:54:24.612 INFO  t=1440s sent=144001 done=143993 inflight=8 | last 30s: 100.1 req/s p50=84.863 p95=105.279 p99=116.863 max=119.487 ms errors=0 | gateway heap 55.4 MB
+07:54:54.619 INFO  t=1470s sent=147002 done=146993 inflight=9 | last 30s: 100.0 req/s p50=85.183 p95=105.855 p99=117.055 max=120.063 ms errors=0 | gateway heap 25.3 MB
+07:55:24.613 INFO  t=1500s sent=150001 done=149992 inflight=9 | last 30s: 100.0 req/s p50=84.927 p95=106.175 p99=116.479 max=118.783 ms errors=0 | gateway heap 39.4 MB
+07:55:54.622 INFO  t=1530s sent=153002 done=152994 inflight=8 | last 30s: 100.0 req/s p50=84.735 p95=105.215 p99=117.375 max=119.295 ms errors=0 | gateway heap 55.4 MB
+07:56:24.622 INFO  t=1560s sent=156002 done=155993 inflight=9 | last 30s: 100.0 req/s p50=85.055 p95=106.047 p99=117.631 max=119.551 ms errors=0 | gateway heap 25.4 MB
+07:56:54.626 INFO  t=1590s sent=159002 done=158996 inflight=6 | last 30s: 100.1 req/s p50=84.863 p95=106.751 p99=117.055 max=119.551 ms errors=0 | gateway heap 39.4 MB
+07:57:24.613 INFO  t=1620s sent=162001 done=161993 inflight=8 | last 30s: 100.0 req/s p50=83.455 p95=113.407 p99=116.095 max=118.719 ms errors=0 | gateway heap 53.4 MB
+07:57:54.626 INFO  t=1650s sent=165002 done=164994 inflight=8 | last 30s: 100.0 req/s p50=82.815 p95=111.935 p99=114.687 max=117.439 ms errors=0 | gateway heap 23.4 MB
+07:58:24.613 INFO  t=1680s sent=168001 done=167993 inflight=8 | last 30s: 100.0 req/s p50=83.391 p95=113.151 p99=115.519 max=118.911 ms errors=0 | gateway heap 37.4 MB
+07:58:54.619 INFO  t=1710s sent=171002 done=170993 inflight=9 | last 30s: 100.0 req/s p50=83.583 p95=113.471 p99=115.903 max=119.167 ms errors=0 | gateway heap 53.4 MB
+07:59:24.623 INFO  t=1740s sent=174002 done=173994 inflight=8 | last 30s: 100.0 req/s p50=84.735 p95=106.431 p99=117.247 max=119.487 ms errors=0 | gateway heap 67.4 MB
+07:59:54.614 INFO  t=1770s sent=177001 done=176992 inflight=9 | last 30s: 99.9 req/s p50=84.735 p95=108.607 p99=116.799 max=119.295 ms errors=0 | gateway heap 37.4 MB
+08:00:24.615 INFO  t=1800s sent=180001 done=179992 inflight=9 | last 30s: 100.0 req/s p50=84.927 p95=106.303 p99=117.247 max=119.103 ms errors=0 | gateway heap 51.4 MB
+08:00:54.615 INFO  t=1830s sent=183001 done=182992 inflight=9 | last 30s: 100.1 req/s p50=84.799 p95=107.007 p99=117.439 max=119.423 ms errors=0 | gateway heap 67.4 MB
+08:01:24.617 INFO  t=1860s sent=186002 done=185993 inflight=9 | last 30s: 100.0 req/s p50=84.799 p95=106.687 p99=117.119 max=120.895 ms errors=0 | gateway heap 37.4 MB
+08:01:54.613 INFO  t=1890s sent=189001 done=188992 inflight=9 | last 30s: 99.9 req/s p50=84.223 p95=106.047 p99=117.055 max=118.911 ms errors=0 | gateway heap 51.4 MB
+08:02:24.621 INFO  t=1920s sent=192002 done=191993 inflight=9 | last 30s: 100.1 req/s p50=84.927 p95=107.263 p99=117.567 max=119.359 ms errors=0 | gateway heap 67.4 MB
+08:02:54.619 INFO  t=1950s sent=195002 done=194993 inflight=9 | last 30s: 100.0 req/s p50=84.991 p95=105.535 p99=116.671 max=119.871 ms errors=0 | gateway heap 35.4 MB
+08:03:24.617 INFO  t=1980s sent=198002 done=197993 inflight=9 | last 30s: 99.9 req/s p50=84.863 p95=106.175 p99=117.375 max=119.295 ms errors=0 | gateway heap 51.4 MB
+08:03:54.620 INFO  t=2010s sent=201002 done=200994 inflight=8 | last 30s: 100.0 req/s p50=84.607 p95=107.391 p99=117.439 max=119.551 ms errors=0 | gateway heap 65.4 MB
+08:04:24.620 INFO  t=2040s sent=204002 done=203993 inflight=9 | last 30s: 100.0 req/s p50=85.183 p95=105.855 p99=116.735 max=119.103 ms errors=0 | gateway heap 35.4 MB
+08:04:54.617 INFO  t=2070s sent=207001 done=206994 inflight=7 | last 30s: 100.0 req/s p50=84.991 p95=106.815 p99=116.479 max=118.847 ms errors=0 | gateway heap 49.4 MB
+08:05:24.614 INFO  t=2100s sent=210001 done=209993 inflight=8 | last 30s: 100.0 req/s p50=84.415 p95=112.255 p99=116.351 max=119.615 ms errors=0 | gateway heap 65.4 MB
+08:05:54.613 INFO  t=2130s sent=213001 done=212994 inflight=7 | last 30s: 100.1 req/s p50=84.735 p95=106.751 p99=116.863 max=119.551 ms errors=0 | gateway heap 33.4 MB
+08:06:24.616 INFO  t=2160s sent=216001 done=215991 inflight=10 | last 30s: 99.9 req/s p50=84.927 p95=104.639 p99=116.479 max=118.975 ms errors=0 | gateway heap 49.4 MB
+08:06:54.624 INFO  t=2190s sent=219002 done=218994 inflight=8 | last 30s: 100.1 req/s p50=84.991 p95=105.535 p99=116.799 max=119.615 ms errors=0 | gateway heap 63.5 MB
+08:07:24.624 INFO  t=2220s sent=222002 done=221995 inflight=7 | last 30s: 100.0 req/s p50=85.247 p95=105.215 p99=116.991 max=119.679 ms errors=0 | gateway heap 33.4 MB
+08:07:54.628 INFO  t=2250s sent=225002 done=224993 inflight=9 | last 30s: 100.0 req/s p50=84.671 p95=108.991 p99=117.183 max=126.015 ms errors=0 | gateway heap 47.4 MB
+08:08:24.611 INFO  t=2280s sent=228001 done=227992 inflight=9 | last 30s: 100.0 req/s p50=84.927 p95=105.535 p99=117.247 max=118.975 ms errors=0 | gateway heap 63.5 MB
+08:08:54.625 INFO  t=2310s sent=231002 done=230994 inflight=8 | last 30s: 100.0 req/s p50=84.735 p95=108.287 p99=116.799 max=119.615 ms errors=0 | gateway heap 31.4 MB
+08:09:24.622 INFO  t=2340s sent=234002 done=233993 inflight=9 | last 30s: 100.1 req/s p50=84.735 p95=113.471 p99=117.247 max=120.447 ms errors=0 | gateway heap 45.4 MB
+08:09:54.625 INFO  t=2370s sent=237002 done=236993 inflight=9 | last 30s: 100.0 req/s p50=84.671 p95=106.175 p99=116.863 max=120.767 ms errors=0 | gateway heap 61.4 MB
+08:10:24.622 INFO  t=2400s sent=240002 done=239994 inflight=8 | last 30s: 100.0 req/s p50=85.119 p95=107.775 p99=116.991 max=119.231 ms errors=0 | gateway heap 29.5 MB
+08:10:54.618 INFO  t=2430s sent=243002 done=242993 inflight=9 | last 30s: 100.0 req/s p50=84.799 p95=107.199 p99=116.735 max=127.935 ms errors=0 | gateway heap 45.5 MB
+08:11:24.617 INFO  t=2460s sent=246002 done=245993 inflight=9 | last 30s: 99.9 req/s p50=84.863 p95=106.431 p99=116.479 max=119.935 ms errors=0 | gateway heap 59.4 MB
+08:11:54.617 INFO  t=2490s sent=249001 done=248992 inflight=9 | last 30s: 100.1 req/s p50=85.183 p95=105.407 p99=116.927 max=119.487 ms errors=0 | gateway heap 29.4 MB
+08:12:24.618 INFO  t=2520s sent=252002 done=251992 inflight=10 | last 30s: 100.0 req/s p50=84.415 p95=106.623 p99=117.055 max=119.487 ms errors=0 | gateway heap 43.5 MB
+08:12:54.617 INFO  t=2550s sent=255001 done=254993 inflight=8 | last 30s: 100.0 req/s p50=84.863 p95=107.711 p99=117.055 max=122.495 ms errors=0 | gateway heap 59.4 MB
+08:13:24.619 INFO  t=2580s sent=258002 done=257995 inflight=7 | last 30s: 100.0 req/s p50=85.247 p95=105.407 p99=116.863 max=119.807 ms errors=0 | gateway heap 27.4 MB
+08:13:54.613 INFO  t=2610s sent=261001 done=260993 inflight=8 | last 30s: 100.1 req/s p50=85.055 p95=106.431 p99=117.247 max=119.743 ms errors=0 | gateway heap 43.5 MB
+08:14:24.613 INFO  t=2640s sent=264001 done=263993 inflight=8 | last 30s: 100.0 req/s p50=84.671 p95=110.207 p99=117.055 max=127.871 ms errors=0 | gateway heap 57.4 MB
+08:14:54.620 INFO  t=2670s sent=267001 done=266992 inflight=9 | last 30s: 100.0 req/s p50=84.991 p95=107.519 p99=117.183 max=120.831 ms errors=0 | gateway heap 27.4 MB
+08:15:24.624 INFO  t=2700s sent=270002 done=269995 inflight=7 | last 30s: 100.0 req/s p50=84.863 p95=107.199 p99=116.735 max=119.487 ms errors=0 | gateway heap 41.5 MB
+08:15:54.618 INFO  t=2730s sent=273001 done=272992 inflight=9 | last 30s: 100.0 req/s p50=84.991 p95=106.879 p99=117.055 max=124.799 ms errors=0 | gateway heap 57.5 MB
+08:16:24.623 INFO  t=2760s sent=276002 done=275993 inflight=9 | last 30s: 100.0 req/s p50=84.927 p95=107.327 p99=117.055 max=119.487 ms errors=0 | gateway heap 25.4 MB
+08:16:54.610 INFO  t=2790s sent=279001 done=278993 inflight=8 | last 30s: 100.0 req/s p50=84.991 p95=106.367 p99=117.247 max=161.407 ms errors=0 | gateway heap 41.4 MB
+08:17:24.617 INFO  t=2820s sent=282002 done=281995 inflight=7 | last 30s: 99.9 req/s p50=84.927 p95=106.751 p99=117.567 max=124.095 ms errors=0 | gateway heap 55.5 MB
+08:17:54.620 INFO  t=2850s sent=285002 done=284992 inflight=10 | last 30s: 99.9 req/s p50=85.055 p95=107.839 p99=116.991 max=137.599 ms errors=0 | gateway heap 25.5 MB
+08:18:24.623 INFO  t=2880s sent=288002 done=287993 inflight=9 | last 30s: 100.1 req/s p50=84.671 p95=106.943 p99=116.927 max=124.479 ms errors=0 | gateway heap 39.4 MB
+08:18:54.622 INFO  t=2910s sent=291002 done=290992 inflight=10 | last 30s: 100.0 req/s p50=84.799 p95=107.071 p99=117.439 max=119.295 ms errors=0 | gateway heap 55.4 MB
+08:19:24.627 INFO  t=2940s sent=294003 done=293995 inflight=8 | last 30s: 100.0 req/s p50=84.607 p95=111.743 p99=116.927 max=124.287 ms errors=0 | gateway heap 23.4 MB
+08:19:54.617 INFO  t=2970s sent=297001 done=296992 inflight=9 | last 30s: 100.0 req/s p50=84.735 p95=107.519 p99=117.503 max=119.551 ms errors=0 | gateway heap 39.5 MB
+08:20:24.619 INFO  t=3000s sent=300002 done=299994 inflight=8 | last 30s: 100.0 req/s p50=84.799 p95=105.663 p99=117.183 max=119.487 ms errors=0 | gateway heap 53.4 MB
+08:20:54.621 INFO  t=3030s sent=303002 done=302993 inflight=9 | last 30s: 100.0 req/s p50=85.375 p95=106.879 p99=116.799 max=120.319 ms errors=0 | gateway heap 67.5 MB
+08:21:24.626 INFO  t=3060s sent=306002 done=305995 inflight=7 | last 30s: 100.0 req/s p50=85.119 p95=106.559 p99=117.247 max=120.063 ms errors=0 | gateway heap 37.5 MB
+08:21:54.620 INFO  t=3090s sent=309002 done=308994 inflight=8 | last 30s: 100.1 req/s p50=85.055 p95=107.775 p99=117.375 max=119.359 ms errors=0 | gateway heap 51.5 MB
+08:22:24.615 INFO  t=3120s sent=312001 done=311994 inflight=7 | last 30s: 100.0 req/s p50=85.183 p95=105.279 p99=117.183 max=119.231 ms errors=0 | gateway heap 67.5 MB
+08:22:54.620 INFO  t=3150s sent=315002 done=314991 inflight=11 | last 30s: 99.9 req/s p50=85.247 p95=106.751 p99=116.735 max=121.023 ms errors=0 | gateway heap 37.5 MB
+08:23:24.619 INFO  t=3180s sent=318002 done=317993 inflight=9 | last 30s: 100.0 req/s p50=84.159 p95=107.135 p99=116.607 max=118.911 ms errors=0 | gateway heap 51.5 MB
+08:23:54.620 INFO  t=3210s sent=321002 done=320993 inflight=9 | last 30s: 100.0 req/s p50=83.967 p95=112.127 p99=116.927 max=119.103 ms errors=0 | gateway heap 65.5 MB
+08:24:24.627 INFO  t=3240s sent=324002 done=323995 inflight=7 | last 30s: 100.0 req/s p50=83.967 p95=110.527 p99=116.543 max=118.975 ms errors=0 | gateway heap 35.5 MB
+08:24:54.612 INFO  t=3270s sent=327001 done=326993 inflight=8 | last 30s: 100.0 req/s p50=83.775 p95=113.023 p99=116.735 max=119.039 ms errors=0 | gateway heap 49.5 MB
+08:25:24.614 INFO  t=3300s sent=330001 done=329994 inflight=7 | last 30s: 100.0 req/s p50=83.839 p95=107.839 p99=116.351 max=118.335 ms errors=0 | gateway heap 65.5 MB
+08:25:54.618 INFO  t=3330s sent=333002 done=332995 inflight=7 | last 30s: 100.0 req/s p50=83.903 p95=108.671 p99=116.607 max=118.975 ms errors=0 | gateway heap 35.5 MB
+08:26:24.622 INFO  t=3360s sent=336002 done=335994 inflight=8 | last 30s: 100.1 req/s p50=84.031 p95=107.967 p99=116.927 max=119.167 ms errors=0 | gateway heap 49.5 MB
+08:26:54.626 INFO  t=3390s sent=339002 done=338993 inflight=9 | last 30s: 100.0 req/s p50=84.095 p95=109.823 p99=116.991 max=118.591 ms errors=0 | gateway heap 63.5 MB
+08:27:24.612 INFO  t=3420s sent=342001 done=341994 inflight=7 | last 30s: 100.0 req/s p50=83.903 p95=110.975 p99=116.863 max=119.039 ms errors=0 | gateway heap 33.5 MB
+08:27:54.615 INFO  t=3450s sent=345001 done=344991 inflight=10 | last 30s: 100.0 req/s p50=83.903 p95=110.463 p99=116.799 max=118.655 ms errors=0 | gateway heap 47.5 MB
+08:28:24.615 INFO  t=3480s sent=348001 done=347993 inflight=8 | last 30s: 100.0 req/s p50=83.583 p95=107.839 p99=116.479 max=122.495 ms errors=0 | gateway heap 63.5 MB
+08:28:54.617 INFO  t=3510s sent=351002 done=350991 inflight=11 | last 30s: 99.9 req/s p50=83.903 p95=106.879 p99=116.799 max=119.231 ms errors=0 | gateway heap 33.5 MB
+08:29:24.623 INFO  t=3540s sent=354002 done=353992 inflight=10 | last 30s: 100.1 req/s p50=83.519 p95=108.799 p99=116.095 max=119.039 ms errors=0 | gateway heap 47.5 MB
+08:29:54.625 INFO  t=3570s sent=357002 done=356993 inflight=9 | last 30s: 100.0 req/s p50=83.967 p95=109.823 p99=116.735 max=118.783 ms errors=0 | gateway heap 61.5 MB
+08:30:24.612 INFO  t=3600s sent=360001 done=359993 inflight=8 | last 30s: 100.0 req/s p50=83.711 p95=111.295 p99=116.159 max=118.527 ms errors=0 | gateway heap 31.5 MB
+08:30:54.615 INFO  t=3630s sent=363001 done=362992 inflight=9 | last 30s: 99.9 req/s p50=83.519 p95=112.895 p99=116.607 max=119.167 ms errors=0 | gateway heap 45.6 MB
+08:31:24.618 INFO  t=3660s sent=366002 done=365993 inflight=9 | last 30s: 100.0 req/s p50=83.839 p95=107.775 p99=116.479 max=118.527 ms errors=0 | gateway heap 61.5 MB
+08:31:54.621 INFO  t=3690s sent=369002 done=368993 inflight=9 | last 30s: 100.1 req/s p50=84.031 p95=106.367 p99=116.735 max=118.527 ms errors=0 | gateway heap 29.5 MB
+08:32:24.626 INFO  t=3720s sent=372002 done=371995 inflight=7 | last 30s: 100.0 req/s p50=84.095 p95=107.967 p99=116.415 max=118.719 ms errors=0 | gateway heap 45.5 MB
+08:32:54.612 INFO  t=3750s sent=375001 done=374993 inflight=8 | last 30s: 100.0 req/s p50=83.967 p95=113.791 p99=116.927 max=119.615 ms errors=0 | gateway heap 59.5 MB
+08:33:24.613 INFO  t=3780s sent=378001 done=377993 inflight=8 | last 30s: 100.0 req/s p50=84.159 p95=108.479 p99=116.927 max=119.551 ms errors=0 | gateway heap 29.6 MB
+08:33:54.620 INFO  t=3810s sent=381002 done=380994 inflight=8 | last 30s: 100.0 req/s p50=84.031 p95=109.823 p99=116.863 max=121.343 ms errors=0 | gateway heap 43.6 MB
+08:34:24.626 INFO  t=3840s sent=384002 done=383995 inflight=7 | last 30s: 100.0 req/s p50=83.839 p95=112.319 p99=116.415 max=118.335 ms errors=0 | gateway heap 59.6 MB
+08:34:54.622 INFO  t=3870s sent=387002 done=386993 inflight=9 | last 30s: 100.0 req/s p50=83.775 p95=108.415 p99=116.927 max=118.783 ms errors=0 | gateway heap 27.5 MB
+08:35:24.627 INFO  t=3900s sent=390002 done=389993 inflight=9 | last 30s: 100.0 req/s p50=83.967 p95=106.751 p99=116.479 max=120.383 ms errors=0 | gateway heap 43.6 MB
+08:35:54.613 INFO  t=3930s sent=393001 done=392992 inflight=9 | last 30s: 99.9 req/s p50=83.967 p95=110.015 p99=116.479 max=127.167 ms errors=0 | gateway heap 57.6 MB
+08:36:24.616 INFO  t=3960s sent=396001 done=395993 inflight=8 | last 30s: 100.0 req/s p50=84.031 p95=109.439 p99=116.799 max=118.847 ms errors=0 | gateway heap 27.6 MB
+08:36:54.620 INFO  t=3990s sent=399002 done=398992 inflight=10 | last 30s: 100.0 req/s p50=83.903 p95=108.799 p99=116.991 max=118.719 ms errors=0 | gateway heap 41.6 MB
+08:37:24.622 INFO  t=4020s sent=402002 done=401993 inflight=9 | last 30s: 100.0 req/s p50=84.031 p95=106.687 p99=116.479 max=118.527 ms errors=0 | gateway heap 55.6 MB
+08:37:54.625 INFO  t=4050s sent=405002 done=404994 inflight=8 | last 30s: 100.0 req/s p50=83.967 p95=106.431 p99=116.671 max=119.039 ms errors=0 | gateway heap 25.6 MB
+08:38:24.612 INFO  t=4080s sent=408001 done=407991 inflight=10 | last 30s: 99.9 req/s p50=83.967 p95=107.647 p99=116.543 max=122.175 ms errors=0 | gateway heap 39.6 MB
+08:38:54.614 INFO  t=4110s sent=411001 done=410993 inflight=8 | last 30s: 100.0 req/s p50=83.839 p95=108.927 p99=116.287 max=118.911 ms errors=0 | gateway heap 55.6 MB
+08:39:24.618 INFO  t=4140s sent=414002 done=413994 inflight=8 | last 30s: 100.1 req/s p50=83.711 p95=112.895 p99=116.671 max=119.231 ms errors=0 | gateway heap 25.6 MB
+08:39:54.612 INFO  t=4170s sent=417001 done=416992 inflight=9 | last 30s: 100.0 req/s p50=83.775 p95=105.215 p99=116.799 max=118.527 ms errors=0 | gateway heap 39.6 MB
+08:40:24.623 INFO  t=4200s sent=420002 done=419994 inflight=8 | last 30s: 100.1 req/s p50=84.159 p95=109.503 p99=116.735 max=126.847 ms errors=0 | gateway heap 53.6 MB
+08:40:54.628 INFO  t=4230s sent=423003 done=422993 inflight=10 | last 30s: 100.0 req/s p50=82.751 p95=113.343 p99=115.647 max=119.103 ms errors=0 | gateway heap 23.6 MB
+08:41:24.615 INFO  t=4260s sent=426001 done=425994 inflight=7 | last 30s: 99.9 req/s p50=83.839 p95=109.887 p99=116.607 max=118.911 ms errors=0 | gateway heap 37.6 MB
+08:41:54.617 INFO  t=4290s sent=429002 done=428993 inflight=9 | last 30s: 100.0 req/s p50=83.839 p95=109.183 p99=116.607 max=119.359 ms errors=0 | gateway heap 53.6 MB
+08:42:24.619 INFO  t=4320s sent=432002 done=431995 inflight=7 | last 30s: 100.1 req/s p50=83.967 p95=110.015 p99=116.927 max=119.231 ms errors=0 | gateway heap 67.6 MB
+08:42:54.623 INFO  t=4350s sent=435002 done=434994 inflight=8 | last 30s: 100.0 req/s p50=84.159 p95=109.119 p99=117.055 max=120.319 ms errors=0 | gateway heap 35.6 MB
+08:43:24.626 INFO  t=4380s sent=438002 done=437995 inflight=7 | last 30s: 100.0 req/s p50=84.095 p95=110.399 p99=117.055 max=119.167 ms errors=0 | gateway heap 51.6 MB
+08:43:54.611 INFO  t=4410s sent=441001 done=440993 inflight=8 | last 30s: 100.0 req/s p50=84.031 p95=110.911 p99=116.863 max=119.423 ms errors=0 | gateway heap 65.6 MB
+08:44:24.615 INFO  t=4440s sent=444001 done=443993 inflight=8 | last 30s: 100.0 req/s p50=84.095 p95=111.807 p99=116.927 max=127.487 ms errors=0 | gateway heap 35.7 MB
+08:44:54.618 INFO  t=4470s sent=447002 done=446993 inflight=9 | last 30s: 99.9 req/s p50=83.583 p95=106.111 p99=116.095 max=118.847 ms errors=0 | gateway heap 49.6 MB
+08:45:24.622 INFO  t=4500s sent=450002 done=449993 inflight=9 | last 30s: 100.0 req/s p50=83.903 p95=108.351 p99=116.287 max=118.783 ms errors=0 | gateway heap 65.7 MB
+08:45:54.626 INFO  t=4530s sent=453002 done=452993 inflight=9 | last 30s: 100.1 req/s p50=84.095 p95=108.863 p99=116.735 max=119.167 ms errors=0 | gateway heap 33.7 MB
+08:46:24.612 INFO  t=4560s sent=456001 done=455993 inflight=8 | last 30s: 99.9 req/s p50=84.031 p95=108.287 p99=116.415 max=118.335 ms errors=0 | gateway heap 49.7 MB
+08:46:54.616 INFO  t=4590s sent=459001 done=458991 inflight=10 | last 30s: 100.0 req/s p50=84.031 p95=105.599 p99=116.671 max=118.655 ms errors=0 | gateway heap 63.7 MB
+08:47:24.615 INFO  t=4620s sent=462001 done=461993 inflight=8 | last 30s: 100.0 req/s p50=84.031 p95=109.311 p99=117.055 max=118.911 ms errors=0 | gateway heap 33.7 MB
+08:47:54.621 INFO  t=4650s sent=465002 done=464995 inflight=7 | last 30s: 100.1 req/s p50=83.903 p95=108.863 p99=116.543 max=119.103 ms errors=0 | gateway heap 47.7 MB
+08:48:24.622 INFO  t=4680s sent=468002 done=467995 inflight=7 | last 30s: 100.0 req/s p50=83.903 p95=107.839 p99=116.607 max=118.399 ms errors=0 | gateway heap 63.7 MB
+08:48:54.613 INFO  t=4710s sent=471001 done=470991 inflight=10 | last 30s: 99.9 req/s p50=83.711 p95=107.199 p99=116.607 max=118.719 ms errors=0 | gateway heap 31.7 MB
+08:49:24.615 INFO  t=4740s sent=474001 done=473992 inflight=9 | last 30s: 100.0 req/s p50=83.839 p95=111.231 p99=116.671 max=118.655 ms errors=0 | gateway heap 45.7 MB
+08:49:54.616 INFO  t=4770s sent=477002 done=476992 inflight=10 | last 30s: 100.0 req/s p50=83.903 p95=110.527 p99=116.543 max=125.247 ms errors=0 | gateway heap 61.7 MB
+08:50:24.614 INFO  t=4800s sent=480001 done=479991 inflight=10 | last 30s: 100.1 req/s p50=84.031 p95=109.247 p99=116.799 max=119.167 ms errors=0 | gateway heap 29.7 MB
+08:50:54.622 INFO  t=4830s sent=483002 done=482993 inflight=9 | last 30s: 99.9 req/s p50=83.711 p95=112.959 p99=116.607 max=119.935 ms errors=0 | gateway heap 45.7 MB
+08:51:24.624 INFO  t=4860s sent=486002 done=485994 inflight=8 | last 30s: 100.1 req/s p50=84.095 p95=110.335 p99=116.927 max=123.647 ms errors=0 | gateway heap 59.7 MB
+08:51:54.612 INFO  t=4890s sent=489001 done=488993 inflight=8 | last 30s: 99.9 req/s p50=84.031 p95=108.863 p99=116.607 max=119.103 ms errors=0 | gateway heap 29.7 MB
+08:52:24.617 INFO  t=4920s sent=492002 done=491993 inflight=9 | last 30s: 100.0 req/s p50=83.839 p95=107.839 p99=116.607 max=119.295 ms errors=0 | gateway heap 43.7 MB
+08:52:54.618 INFO  t=4950s sent=495002 done=494994 inflight=8 | last 30s: 100.1 req/s p50=83.967 p95=112.511 p99=117.055 max=119.167 ms errors=0 | gateway heap 59.7 MB
+08:53:24.622 INFO  t=4980s sent=498002 done=497994 inflight=8 | last 30s: 100.0 req/s p50=84.095 p95=110.335 p99=116.735 max=129.215 ms errors=0 | gateway heap 27.7 MB
+==================== Telecom-Bridge load test report ====================
+Target          : 100 TPS, 500000 measured requests (+500 warm-up)
+Elapsed         : 5005.1 s
+Achieved rate   : 100.0 req/s
+Completed       : 500000 / 500000
+  HTTP 200      : 500000
+  HTTP 422      : 0
+  HTTP 5xx      : 0
+  HTTP other    : 0
+  transport err : 0
+Latency (ms)    : p50=84.4  p90=102.8  p95=108.3  p99=116.8  p99.9=118.8  max=186.6  mean=85.4
+Breakdown of the end-to-end figure above, per request:
+  peer round trip (CCR->CCA, dominated by the simulator's own delay)
+  gateway + client overhead on top of that (HTTP, JSON, sockets)
+Gateway heap    : first=29.0 MB  last=27.7 MB  min=23.2 MB  max=67.6 MB  (166 samples)
+  unmatched answers = 0.0
+  pending now = 0.0
+  CCR->CCA p50 = 81.8 ms
+  CCR->CCA p95 = 111.1 ms
+  CCR->CCA p99 = 115.3 ms
+  CCR->CCA count = 500500
+  timeouts = 0.0
+Constraint p95 < 100 ms : VIOLATED
+  Note: the peer round trip alone is p95=106.0 ms. A simulator delay drawn uniformly from [50, 100] ms has a p95 of
+Constraint errors == 0  : OK
+Constraint all completed: OK
+Constraint run continuous: OK
+RESULT: FAIL
+=========================================================================
+--- simulator delay accuracy on this host ---
+08:53:45.515 INFO  [sim-worker-3-1] c.t.s.DiameterSimulator - stats connections(active=1, total=4) cer=4 dwr=54 ccr=500129 cca=500118 (ok=500112, fail=6, dropped=3) protocolErrors=3 delayOvershoot(avg=7.9ms, max=51.4ms)

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} %-5level [%thread] %logger{24} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Set SIM_LOG_LEVEL=DEBUG to see every message in and out (one line per Diameter message). -->
+  <logger name="com.telecombridge" level="${SIM_LOG_LEVEL:-INFO}"/>
+  <logger name="io.netty" level="WARN"/>
+
+  <root level="INFO">
+    <appender-ref ref="CONSOLE"/>
+  </root>
+</configuration>

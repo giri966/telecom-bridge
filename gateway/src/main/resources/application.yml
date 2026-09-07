@@ -1,0 +1,43 @@
+server:
+  port: ${GATEWAY_PORT:8080}
+  shutdown: graceful
+
+spring:
+  application:
+    name: telecom-bridge-gateway
+  lifecycle:
+    timeout-per-shutdown-phase: 10s
+
+diameter:
+  host: ${DIAMETER_HOST:localhost}
+  port: ${DIAMETER_PORT:3868}
+  origin-host: ${DIAMETER_ORIGIN_HOST:gateway.telecom-bridge.local}
+  origin-realm: ${DIAMETER_ORIGIN_REALM:telecom-bridge.local}
+  destination-realm: ${DIAMETER_DESTINATION_REALM:telecom-bridge.local}
+  product-name: TelecomBridge
+  vendor-id: 0
+  service-context-id: 32251@3gpp.org
+  request-timeout: ${DIAMETER_REQUEST_TIMEOUT:2s}
+  cea-timeout: 5s
+  watchdog-interval: ${DIAMETER_WATCHDOG_INTERVAL:30s}
+  reconnect-delay: 2s
+  max-pending-requests: 10000
+  io-threads: 2
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+logging:
+  level:
+    root: INFO
+    com.telecombridge: ${GATEWAY_LOG_LEVEL:INFO}
+    io.netty: WARN

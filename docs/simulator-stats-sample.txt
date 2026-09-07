@@ -1,0 +1,1 @@
+.s.DiameterSimulator - stats connections(active=1, total=1) cer=1 dwr=0 ccr=30228 cca=30221 (ok=30221, fail=0, dropped=0) protocolErrors=0 delayOvershoot(avg=8.7ms, max=30.7ms)

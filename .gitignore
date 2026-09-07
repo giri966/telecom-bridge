@@ -1,0 +1,14 @@
+target/
+*.log
+!docs/*.log
+*.pcapng
+load-test-report-*.txt
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# Captures are ignored by default, but the deliverable itself is tracked
+*.pcap
+!transaction_flow.pcap
+!docs/transaction_flow.pcap

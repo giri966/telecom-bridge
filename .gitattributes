@@ -1,0 +1,12 @@
+# Normalise line endings so a clone on Linux gets working shell scripts.
+* text=auto
+
+*.sh    text eol=lf
+*.ps1   text eol=crlf
+*.java  text
+*.xml   text
+*.yml   text
+*.md    text
+
+# Binary deliverable: never touch it.
+*.pcap  binary

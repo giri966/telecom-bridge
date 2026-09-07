@@ -1,0 +1,37 @@
+==================== Telecom-Bridge load test report ====================
+Finished        : 2026-09-06 11:20:57
+Endpoint        : http://localhost:8081/api/v1/charge
+Target          : 100 TPS, 12000 measured requests (+500 warm-up)
+Elapsed         : 125.2 s
+Achieved rate   : 99.9 req/s
+
+Completed       : 12000 / 12000
+  HTTP 200      : 12000
+  HTTP 422      : 0
+  HTTP 5xx      : 0
+  HTTP other    : 0
+  transport err : 0
+
+Latency (ms)    : p50=78.8  p90=94.5  p95=95.5  p99=104.9  p99.9=111.7  max=113.2  mean=77.1
+Breakdown of the end-to-end figure above, per request:
+  peer round trip (CCR->CCA, dominated by the simulator's own delay)
+                : p50=76.0  p90=92.0  p95=93.0  p99=102.0  max=109.0  mean=74.7 ms
+  gateway + client overhead on top of that (HTTP, JSON, sockets)
+                : p50=2.2  p90=3.6  p95=4.0  p99=4.9  max=11.6  mean=2.4 ms
+
+Gateway heap    : first=33.5 MB  last=43.7 MB  min=27.7 MB  max=57.6 MB  (4 samples)
+Gateway internals (from /actuator/prometheus, sliding-window estimates):
+  unmatched answers = 0.0
+  pending now = 0.0
+  CCR->CCA p50 = 77.6 ms
+  CCR->CCA p95 = 94.4 ms
+  CCR->CCA p99 = 98.6 ms
+  CCR->CCA count = 12500
+  timeouts = 0.0
+
+Constraint p95 < 100 ms : OK
+Constraint errors == 0  : OK
+Constraint all completed: OK
+
+RESULT: PASS
+=========================================================================

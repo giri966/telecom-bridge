@@ -1,173 +1,76 @@
-libpcap  magic=0xa1b2c3d4  snaplen=262144  linktype=1 (Ethernet)
+transaction_flow.pcap - decoded by tshark
+Captured with dumpcap on the Npcap loopback adapter.
+Capture filter: tcp port 8088 or tcp port 3868   (gateway REST on 8088, Diameter on 3868)
+Display filter below: diameter || http
 
-   1     0.000  127.0.0.1:10289 -> 127.0.0.1:3868  TCP    [SYN]
-   2     0.000  127.0.0.1:3868 -> 127.0.0.1:10289  TCP    [SYN ACK]
-   3     0.000  127.0.0.1:10289 -> 127.0.0.1:3868  TCP    [ACK]
-   4     0.000  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  CER  app=0 hbh=0x728797a1
-   5     0.021  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  CEA  app=0 hbh=0x728797a1 Result-Code=2001
-   6     0.043  127.0.0.1:10272 -> 127.0.0.1:8082  TCP    [SYN]
-   7     0.043  127.0.0.1:8082 -> 127.0.0.1:10272  TCP    [SYN ACK]
-   8     0.043  127.0.0.1:10272 -> 127.0.0.1:8082  TCP    [ACK]
-   9     0.043  127.0.0.1:10272 -> 127.0.0.1:8082  HTTP      GET /actuator/health HTTP/1.1
-  10     0.287  127.0.0.1:8082 -> 127.0.0.1:10272  HTTP      HTTP/1.1 200 OK
-  11     0.287  127.0.0.1:8082 -> 127.0.0.1:10272  HTTP      {"status":"UP","components":{"diameter":{"status":"UP","detail
-  12     0.295  127.0.0.1:8082 -> 127.0.0.1:10272  TCP    [ACK FIN]
-  13     0.295  127.0.0.1:10272 -> 127.0.0.1:8082  TCP    [ACK]
-  14     0.412  127.0.0.1:10291 -> 127.0.0.1:8082  TCP    [SYN]
-  15     0.412  127.0.0.1:8082 -> 127.0.0.1:10291  TCP    [SYN ACK]
-  16     0.412  127.0.0.1:10291 -> 127.0.0.1:8082  TCP    [ACK]
-  17     0.412  127.0.0.1:10291 -> 127.0.0.1:8082  HTTP      GET /actuator/health HTTP/1.1
-  18     0.412  127.0.0.1:8082 -> 127.0.0.1:10291  HTTP      HTTP/1.1 200 OK
-  19     0.412  127.0.0.1:8082 -> 127.0.0.1:10291  HTTP      {"status":"UP","components":{"diameter":{"status":"UP","detail
-  20     0.420  127.0.0.1:8082 -> 127.0.0.1:10291  TCP    [ACK FIN]
-  21     0.420  127.0.0.1:10291 -> 127.0.0.1:8082  TCP    [ACK]
-  22     0.502  127.0.0.1:10292 -> 127.0.0.1:8082  TCP    [SYN]
-  23     0.502  127.0.0.1:8082 -> 127.0.0.1:10292  TCP    [SYN ACK]
-  24     0.502  127.0.0.1:10292 -> 127.0.0.1:8082  TCP    [ACK]
-  25     0.502  127.0.0.1:10292 -> 127.0.0.1:8082  HTTP      POST /api/v1/charge HTTP/1.1
-  26     0.592  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  CCR  app=4 hbh=0x728797a2 Type=INITIAL_REQUEST MSISDN=919876543201
-  27     0.679  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  CCA  app=4 hbh=0x728797a2 Result-Code=2001 DIAMETER_SUCCESS
-  28     0.686  127.0.0.1:8082 -> 127.0.0.1:10292  HTTP      HTTP/1.1 200 OK
-  29     0.686  127.0.0.1:8082 -> 127.0.0.1:10292  HTTP      {"sessionId":"gateway.telecom-bridge.local;1788751542;1","resu
-  30     0.686  127.0.0.1:8082 -> 127.0.0.1:10292  TCP    [ACK FIN]
-  31     0.686  127.0.0.1:10292 -> 127.0.0.1:8082  TCP    [ACK]
-  32     0.743  127.0.0.1:10293 -> 127.0.0.1:8082  TCP    [SYN]
-  33     0.743  127.0.0.1:8082 -> 127.0.0.1:10293  TCP    [SYN ACK]
-  34     0.743  127.0.0.1:10293 -> 127.0.0.1:8082  TCP    [ACK]
-  35     0.743  127.0.0.1:10293 -> 127.0.0.1:8082  HTTP      POST /api/v1/charge HTTP/1.1
-  36     0.743  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  CCR  app=4 hbh=0x728797a3 Type=INITIAL_REQUEST MSISDN=919876543202
-  37     0.822  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  CCA  app=4 hbh=0x728797a3 Result-Code=2001 DIAMETER_SUCCESS
-  38     0.822  127.0.0.1:8082 -> 127.0.0.1:10293  HTTP      HTTP/1.1 200 OK
-  39     0.822  127.0.0.1:8082 -> 127.0.0.1:10293  HTTP      {"sessionId":"gateway.telecom-bridge.local;1788751542;2","resu
-  40     0.822  127.0.0.1:8082 -> 127.0.0.1:10293  TCP    [ACK FIN]
-  41     0.822  127.0.0.1:10293 -> 127.0.0.1:8082  TCP    [ACK]
-  42     0.902  127.0.0.1:10294 -> 127.0.0.1:8082  TCP    [SYN]
-  43     0.902  127.0.0.1:8082 -> 127.0.0.1:10294  TCP    [SYN ACK]
-  44     0.902  127.0.0.1:10294 -> 127.0.0.1:8082  TCP    [ACK]
-  45     0.902  127.0.0.1:10294 -> 127.0.0.1:8082  HTTP      POST /api/v1/charge HTTP/1.1
-  46     0.902  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  CCR  app=4 hbh=0x728797a4 Type=INITIAL_REQUEST MSISDN=919876543203
-  47     0.983  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  CCA  app=4 hbh=0x728797a4 Result-Code=2001 DIAMETER_SUCCESS
-  48     0.983  127.0.0.1:8082 -> 127.0.0.1:10294  HTTP      HTTP/1.1 200 OK
-  49     0.983  127.0.0.1:8082 -> 127.0.0.1:10294  HTTP      {"sessionId":"gateway.telecom-bridge.local;1788751542;3","resu
-  50     0.983  127.0.0.1:8082 -> 127.0.0.1:10294  TCP    [ACK FIN]
-  51     0.983  127.0.0.1:10294 -> 127.0.0.1:8082  TCP    [ACK]
-  52     1.062  127.0.0.1:10295 -> 127.0.0.1:8082  TCP    [SYN]
-  53     1.062  127.0.0.1:8082 -> 127.0.0.1:10295  TCP    [SYN ACK]
-  54     1.062  127.0.0.1:10295 -> 127.0.0.1:8082  TCP    [ACK]
-  55     1.062  127.0.0.1:10295 -> 127.0.0.1:8082  HTTP      POST /api/v1/charge HTTP/1.1
-  56     1.062  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  CCR  app=4 hbh=0x728797a5 Type=INITIAL_REQUEST MSISDN=919876543204
-  57     1.160  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  CCA  app=4 hbh=0x728797a5 Result-Code=2001 DIAMETER_SUCCESS
-  58     1.162  127.0.0.1:8082 -> 127.0.0.1:10295  HTTP      HTTP/1.1 200 OK
-  59     1.162  127.0.0.1:8082 -> 127.0.0.1:10295  HTTP      {"sessionId":"gateway.telecom-bridge.local;1788751542;4","resu
-  60     1.162  127.0.0.1:8082 -> 127.0.0.1:10295  TCP    [ACK FIN]
-  61     1.162  127.0.0.1:10295 -> 127.0.0.1:8082  TCP    [ACK]
-  62     1.218  127.0.0.1:10296 -> 127.0.0.1:8082  TCP    [SYN]
-  63     1.218  127.0.0.1:8082 -> 127.0.0.1:10296  TCP    [SYN ACK]
-  64     1.218  127.0.0.1:10296 -> 127.0.0.1:8082  TCP    [ACK]
-  65     1.218  127.0.0.1:10296 -> 127.0.0.1:8082  HTTP      POST /api/v1/charge HTTP/1.1
-  66     1.224  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  CCR  app=4 hbh=0x728797a6 Type=INITIAL_REQUEST MSISDN=919876543205
-  67     1.287  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  CCA  app=4 hbh=0x728797a6 Result-Code=2001 DIAMETER_SUCCESS
-  68     1.287  127.0.0.1:8082 -> 127.0.0.1:10296  HTTP      HTTP/1.1 200 OK
-  69     1.292  127.0.0.1:8082 -> 127.0.0.1:10296  HTTP      {"sessionId":"gateway.telecom-bridge.local;1788751542;5","resu
-  70     1.292  127.0.0.1:8082 -> 127.0.0.1:10296  TCP    [ACK FIN]
-  71     1.292  127.0.0.1:10296 -> 127.0.0.1:8082  TCP    [ACK]
-  72     1.347  127.0.0.1:10298 -> 127.0.0.1:8082  TCP    [SYN]
-  73     1.347  127.0.0.1:8082 -> 127.0.0.1:10298  TCP    [SYN ACK]
-  74     1.347  127.0.0.1:10298 -> 127.0.0.1:8082  TCP    [ACK]
-  75     1.347  127.0.0.1:10298 -> 127.0.0.1:8082  HTTP      POST /api/v1/charge HTTP/1.1
-  76     1.349  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  CCR  app=4 hbh=0x728797a7 Type=INITIAL_REQUEST MSISDN=919876543206
-  77     1.448  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  CCA  app=4 hbh=0x728797a7 Result-Code=2001 DIAMETER_SUCCESS
-  78     1.451  127.0.0.1:8082 -> 127.0.0.1:10298  HTTP      HTTP/1.1 200 OK
-  79     1.451  127.0.0.1:8082 -> 127.0.0.1:10298  HTTP      {"sessionId":"gateway.telecom-bridge.local;1788751542;6","resu
-  80     1.451  127.0.0.1:8082 -> 127.0.0.1:10298  TCP    [ACK FIN]
-  81     1.451  127.0.0.1:10298 -> 127.0.0.1:8082  TCP    [ACK]
-  82     1.503  127.0.0.1:10299 -> 127.0.0.1:8082  TCP    [SYN]
-  83     1.503  127.0.0.1:8082 -> 127.0.0.1:10299  TCP    [SYN ACK]
-  84     1.503  127.0.0.1:10299 -> 127.0.0.1:8082  TCP    [ACK]
-  85     1.503  127.0.0.1:10299 -> 127.0.0.1:8082  HTTP      POST /api/v1/charge HTTP/1.1
-  86     1.511  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  CCR  app=4 hbh=0x728797a8 Type=INITIAL_REQUEST MSISDN=919876543207
-  87     1.575  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  CCA  app=4 hbh=0x728797a8 Result-Code=2001 DIAMETER_SUCCESS
-  88     1.578  127.0.0.1:8082 -> 127.0.0.1:10299  HTTP      HTTP/1.1 200 OK
-  89     1.578  127.0.0.1:8082 -> 127.0.0.1:10299  HTTP      {"sessionId":"gateway.telecom-bridge.local;1788751542;7","resu
-  90     1.579  127.0.0.1:8082 -> 127.0.0.1:10299  TCP    [ACK FIN]
-  91     1.579  127.0.0.1:10299 -> 127.0.0.1:8082  TCP    [ACK]
-  92     1.629  127.0.0.1:10300 -> 127.0.0.1:8082  TCP    [SYN]
-  93     1.629  127.0.0.1:8082 -> 127.0.0.1:10300  TCP    [SYN ACK]
-  94     1.629  127.0.0.1:10300 -> 127.0.0.1:8082  TCP    [ACK]
-  95     1.629  127.0.0.1:10300 -> 127.0.0.1:8082  HTTP      POST /api/v1/charge HTTP/1.1
-  96     1.629  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  CCR  app=4 hbh=0x728797a9 Type=INITIAL_REQUEST MSISDN=919876543208
-  97     1.709  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  CCA  app=4 hbh=0x728797a9 Result-Code=2001 DIAMETER_SUCCESS
-  98     1.709  127.0.0.1:8082 -> 127.0.0.1:10300  HTTP      HTTP/1.1 200 OK
-  99     1.709  127.0.0.1:8082 -> 127.0.0.1:10300  HTTP      {"sessionId":"gateway.telecom-bridge.local;1788751542;8","resu
- 100     1.709  127.0.0.1:8082 -> 127.0.0.1:10300  TCP    [ACK FIN]
- 101     1.709  127.0.0.1:10300 -> 127.0.0.1:8082  TCP    [ACK]
- 102     1.756  127.0.0.1:10301 -> 127.0.0.1:8082  TCP    [SYN]
- 103     1.756  127.0.0.1:8082 -> 127.0.0.1:10301  TCP    [SYN ACK]
- 104     1.756  127.0.0.1:10301 -> 127.0.0.1:8082  TCP    [ACK]
- 105     1.756  127.0.0.1:10301 -> 127.0.0.1:8082  HTTP      POST /api/v1/charge HTTP/1.1
- 106     1.772  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  CCR  app=4 hbh=0x728797aa Type=INITIAL_REQUEST MSISDN=919876543209
- 107     1.869  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  CCA  app=4 hbh=0x728797aa Result-Code=2001 DIAMETER_SUCCESS
- 108     1.869  127.0.0.1:8082 -> 127.0.0.1:10301  HTTP      HTTP/1.1 200 OK
- 109     1.869  127.0.0.1:8082 -> 127.0.0.1:10301  HTTP      {"sessionId":"gateway.telecom-bridge.local;1788751542;9","resu
- 110     1.869  127.0.0.1:8082 -> 127.0.0.1:10301  TCP    [ACK FIN]
- 111     1.869  127.0.0.1:10301 -> 127.0.0.1:8082  TCP    [ACK]
- 112     1.917  127.0.0.1:10302 -> 127.0.0.1:8082  TCP    [SYN]
- 113     1.917  127.0.0.1:8082 -> 127.0.0.1:10302  TCP    [SYN ACK]
- 114     1.917  127.0.0.1:10302 -> 127.0.0.1:8082  TCP    [ACK]
- 115     1.917  127.0.0.1:10302 -> 127.0.0.1:8082  HTTP      POST /api/v1/charge HTTP/1.1
- 116     1.932  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  CCR  app=4 hbh=0x728797ab Type=INITIAL_REQUEST MSISDN=919876543210
- 117     2.028  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  CCA  app=4 hbh=0x728797ab Result-Code=2001 DIAMETER_SUCCESS
- 118     2.028  127.0.0.1:8082 -> 127.0.0.1:10302  HTTP      HTTP/1.1 200 OK
- 119     2.028  127.0.0.1:8082 -> 127.0.0.1:10302  HTTP      {"sessionId":"gateway.telecom-bridge.local;1788751542;10","res
- 120     2.028  127.0.0.1:8082 -> 127.0.0.1:10302  TCP    [ACK FIN]
- 121     2.028  127.0.0.1:10302 -> 127.0.0.1:8082  TCP    [ACK]
- 122     2.076  127.0.0.1:10323 -> 127.0.0.1:8082  TCP    [SYN]
- 123     2.076  127.0.0.1:8082 -> 127.0.0.1:10323  TCP    [SYN ACK]
- 124     2.076  127.0.0.1:10323 -> 127.0.0.1:8082  TCP    [ACK]
- 125     2.076  127.0.0.1:10323 -> 127.0.0.1:8082  HTTP      POST /api/v1/charge HTTP/1.1
- 126     2.076  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  CCR  app=4 hbh=0x728797ac Type=INITIAL_REQUEST MSISDN=919876540000
- 127     2.157  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  CCA  app=4 hbh=0x728797ac Result-Code=5030 DIAMETER_USER_UNKNOWN
- 128     2.157  127.0.0.1:8082 -> 127.0.0.1:10323  HTTP      HTTP/1.1 422 Unprocessable Entity
- 129     2.157  127.0.0.1:8082 -> 127.0.0.1:10323  HTTP      {"sessionId":"gateway.telecom-bridge.local;1788751542;11","res
- 130     2.157  127.0.0.1:8082 -> 127.0.0.1:10323  TCP    [ACK FIN]
- 131     2.157  127.0.0.1:10323 -> 127.0.0.1:8082  TCP    [ACK]
- 132     2.222  127.0.0.1:10324 -> 127.0.0.1:8082  TCP    [SYN]
- 133     2.222  127.0.0.1:8082 -> 127.0.0.1:10324  TCP    [SYN ACK]
- 134     2.222  127.0.0.1:10324 -> 127.0.0.1:8082  TCP    [ACK]
- 135     2.222  127.0.0.1:10324 -> 127.0.0.1:8082  HTTP      POST /api/v1/charge HTTP/1.1
- 136     2.224  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  CCR  app=4 hbh=0x728797ad Type=INITIAL_REQUEST MSISDN=919876549999
- 137     2.300  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  CCA  app=4 hbh=0x728797ad Result-Code=4012 DIAMETER_CREDIT_LIMIT_REACHED
- 138     2.300  127.0.0.1:8082 -> 127.0.0.1:10324  HTTP      HTTP/1.1 422 Unprocessable Entity
- 139     2.300  127.0.0.1:8082 -> 127.0.0.1:10324  HTTP      {"sessionId":"gateway.telecom-bridge.local;1788751542;12","res
- 140     2.300  127.0.0.1:8082 -> 127.0.0.1:10324  TCP    [ACK FIN]
- 141     2.300  127.0.0.1:10324 -> 127.0.0.1:8082  TCP    [ACK]
- 142     2.358  127.0.0.1:10325 -> 127.0.0.1:8082  TCP    [SYN]
- 143     2.358  127.0.0.1:8082 -> 127.0.0.1:10325  TCP    [SYN ACK]
- 144     2.358  127.0.0.1:10325 -> 127.0.0.1:8082  TCP    [ACK]
- 145     2.358  127.0.0.1:10325 -> 127.0.0.1:8082  HTTP      POST /api/v1/charge HTTP/1.1
- 146     2.364  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  CCR  app=4 hbh=0x728797ae Type=INITIAL_REQUEST MSISDN=919876545555
- 147     4.381  127.0.0.1:8082 -> 127.0.0.1:10325  HTTP      HTTP/1.1 504 Gateway Timeout
- 148     4.383  127.0.0.1:8082 -> 127.0.0.1:10325  TCP    [ACK FIN]
- 149     4.383  127.0.0.1:10325 -> 127.0.0.1:8082  TCP    [ACK]
- 150     4.434  127.0.0.1:10336 -> 127.0.0.1:8082  TCP    [SYN]
- 151     4.434  127.0.0.1:8082 -> 127.0.0.1:10336  TCP    [SYN ACK]
- 152     4.434  127.0.0.1:10336 -> 127.0.0.1:8082  TCP    [ACK]
- 153     4.434  127.0.0.1:10336 -> 127.0.0.1:8082  HTTP      POST /api/v1/charge HTTP/1.1
- 154     4.447  127.0.0.1:8082 -> 127.0.0.1:10336  HTTP      HTTP/1.1 400 Bad Request
- 155     4.462  127.0.0.1:8082 -> 127.0.0.1:10336  TCP    [ACK FIN]
- 156     4.462  127.0.0.1:10336 -> 127.0.0.1:8082  TCP    [ACK]
- 157     8.376  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  DWR  app=0 hbh=0x728797af
- 158     8.376  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  DWA  app=0 hbh=0x728797af Result-Code=2001
- 159    14.385  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  DWR  app=0 hbh=0x728797b0
- 160    14.387  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  DWA  app=0 hbh=0x728797b0 Result-Code=2001
- 161    20.388  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  DWR  app=0 hbh=0x728797b1
- 162    20.388  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  DWA  app=0 hbh=0x728797b1 Result-Code=2001
-
-162 frames, IP checksum errors=0, TCP checksum errors=0
-Diameter messages decoded=33, HTTP messages=46
-  CER: 1
-  CEA: 1
-  DWR: 3
-  DWA: 3
-  CCR: 13
-  CCA: 12
+   64   9.403043    127.0.0.1 → 127.0.0.1    DIAMETER 192 Capabilities-Exchange Request | 
+   66   9.450490    127.0.0.1 → 127.0.0.1    DIAMETER 204 Capabilities-Exchange Answer | 
+   71  10.322232          ::1 → ::1          HTTP 157 GET /actuator/health HTTP/1.1 
+   73  10.762566          ::1 → ::1          HTTP/JSON 587 HTTP/1.1 200 OK , JSON (json)
+   82  10.990697          ::1 → ::1          HTTP 157 GET /actuator/health HTTP/1.1 
+   84  11.007968          ::1 → ::1          HTTP/JSON 587 HTTP/1.1 200 OK , JSON (json)
+   93  11.254087          ::1 → ::1          HTTP/JSON 301 POST /api/v1/charge HTTP/1.1 , JSON (application/json)
+   95  11.447110    127.0.0.1 → 127.0.0.1    DIAMETER 332 Credit-Control Request | 
+   97  11.537958    127.0.0.1 → 127.0.0.1    DIAMETER 260 Credit-Control Answer | 
+   99  11.556393          ::1 → ::1          HTTP/JSON 345 HTTP/1.1 200 OK , JSON (application/json)
+  108  11.676300          ::1 → ::1          HTTP/JSON 301 POST /api/v1/charge HTTP/1.1 , JSON (application/json)
+  110  11.685996    127.0.0.1 → 127.0.0.1    DIAMETER 332 Credit-Control Request | 
+  112  11.791005    127.0.0.1 → 127.0.0.1    DIAMETER 260 Credit-Control Answer | 
+  114  11.794668          ::1 → ::1          HTTP/JSON 345 HTTP/1.1 200 OK , JSON (application/json)
+  123  11.914382          ::1 → ::1          HTTP/JSON 301 POST /api/v1/charge HTTP/1.1 , JSON (application/json)
+  125  11.925325    127.0.0.1 → 127.0.0.1    DIAMETER 332 Credit-Control Request | 
+  127  12.010079    127.0.0.1 → 127.0.0.1    DIAMETER 260 Credit-Control Answer | 
+  129  12.013794          ::1 → ::1          HTTP/JSON 344 HTTP/1.1 200 OK , JSON (application/json)
+  138  12.128486          ::1 → ::1          HTTP/JSON 301 POST /api/v1/charge HTTP/1.1 , JSON (application/json)
+  140  12.138929    127.0.0.1 → 127.0.0.1    DIAMETER 332 Credit-Control Request | 
+  142  12.203379    127.0.0.1 → 127.0.0.1    DIAMETER 260 Credit-Control Answer | 
+  144  12.207091          ::1 → ::1          HTTP/JSON 344 HTTP/1.1 200 OK , JSON (application/json)
+  153  12.339147          ::1 → ::1          HTTP/JSON 301 POST /api/v1/charge HTTP/1.1 , JSON (application/json)
+  155  12.349356    127.0.0.1 → 127.0.0.1    DIAMETER 332 Credit-Control Request | 
+  157  12.451042    127.0.0.1 → 127.0.0.1    DIAMETER 260 Credit-Control Answer | 
+  159  12.455326          ::1 → ::1          HTTP/JSON 345 HTTP/1.1 200 OK , JSON (application/json)
+  168  12.567453          ::1 → ::1          HTTP/JSON 301 POST /api/v1/charge HTTP/1.1 , JSON (application/json)
+  170  12.576375    127.0.0.1 → 127.0.0.1    DIAMETER 332 Credit-Control Request | 
+  172  12.655898    127.0.0.1 → 127.0.0.1    DIAMETER 260 Credit-Control Answer | 
+  174  12.658870          ::1 → ::1          HTTP/JSON 344 HTTP/1.1 200 OK , JSON (application/json)
+  183  12.768825          ::1 → ::1          HTTP/JSON 301 POST /api/v1/charge HTTP/1.1 , JSON (application/json)
+  185  12.778414    127.0.0.1 → 127.0.0.1    DIAMETER 332 Credit-Control Request | 
+  187  12.883744    127.0.0.1 → 127.0.0.1    DIAMETER 260 Credit-Control Answer | 
+  189  12.887602          ::1 → ::1          HTTP/JSON 345 HTTP/1.1 200 OK , JSON (application/json)
+  198  13.005474          ::1 → ::1          HTTP/JSON 301 POST /api/v1/charge HTTP/1.1 , JSON (application/json)
+  200  13.014011    127.0.0.1 → 127.0.0.1    DIAMETER 332 Credit-Control Request | 
+  202  13.081603    127.0.0.1 → 127.0.0.1    DIAMETER 260 Credit-Control Answer | 
+  204  13.085639          ::1 → ::1          HTTP/JSON 344 HTTP/1.1 200 OK , JSON (application/json)
+  213  13.196970          ::1 → ::1          HTTP/JSON 301 POST /api/v1/charge HTTP/1.1 , JSON (application/json)
+  215  13.205866    127.0.0.1 → 127.0.0.1    DIAMETER 332 Credit-Control Request | 
+  217  13.306559    127.0.0.1 → 127.0.0.1    DIAMETER 260 Credit-Control Answer | 
+  219  13.309933          ::1 → ::1          HTTP/JSON 345 HTTP/1.1 200 OK , JSON (application/json)
+  228  13.431276          ::1 → ::1          HTTP/JSON 301 POST /api/v1/charge HTTP/1.1 , JSON (application/json)
+  230  13.441619    127.0.0.1 → 127.0.0.1    DIAMETER 332 Credit-Control Request | 
+  232  13.560016    127.0.0.1 → 127.0.0.1    DIAMETER 260 Credit-Control Answer | 
+  234  13.563364          ::1 → ::1          HTTP/JSON 346 HTTP/1.1 200 OK , JSON (application/json)
+  243  13.676654          ::1 → ::1          HTTP/JSON 301 POST /api/v1/charge HTTP/1.1 , JSON (application/json)
+  245  13.685563    127.0.0.1 → 127.0.0.1    DIAMETER 332 Credit-Control Request | 
+  247  13.750020    127.0.0.1 → 127.0.0.1    DIAMETER 224 Credit-Control Answer | 
+  249  13.752925          ::1 → ::1          HTTP/JSON 322 HTTP/1.1 422 Unprocessable Entity , JSON (application/json)
+  258  13.865420          ::1 → ::1          HTTP/JSON 301 POST /api/v1/charge HTTP/1.1 , JSON (application/json)
+  260  13.874735    127.0.0.1 → 127.0.0.1    DIAMETER 332 Credit-Control Request | 
+  262  13.965463    127.0.0.1 → 127.0.0.1    DIAMETER 224 Credit-Control Answer | 
+  264  13.968631          ::1 → ::1          HTTP/JSON 330 HTTP/1.1 422 Unprocessable Entity , JSON (application/json)
+  273  14.082191          ::1 → ::1          HTTP/JSON 301 POST /api/v1/charge HTTP/1.1 , JSON (application/json)
+  275  14.092269    127.0.0.1 → 127.0.0.1    DIAMETER 332 Credit-Control Request | 
+  277  16.136994          ::1 → ::1          HTTP/JSON 273 HTTP/1.1 504 Gateway Timeout , JSON (application/json)
+  286  16.245992          ::1 → ::1          HTTP/JSON 224 POST /api/v1/charge HTTP/1.1 , JSON (application/json)
+  288  16.289834          ::1 → ::1          HTTP/JSON 262 HTTP/1.1 400 Bad Request , JSON (application/json)
+  294  20.102053    127.0.0.1 → 127.0.0.1    DIAMETER 128 Device-Watchdog Request | 
+  296  20.103076    127.0.0.1 → 127.0.0.1    DIAMETER 136 Device-Watchdog Answer | 
+  298  26.105396    127.0.0.1 → 127.0.0.1    DIAMETER 128 Device-Watchdog Request | 
+  300  26.106467    127.0.0.1 → 127.0.0.1    DIAMETER 136 Device-Watchdog Answer | 
+  302  32.116342    127.0.0.1 → 127.0.0.1    DIAMETER 128 Device-Watchdog Request | 
+  304  32.117655    127.0.0.1 → 127.0.0.1    DIAMETER 136 Device-Watchdog Answer | 
+  306  38.118964    127.0.0.1 → 127.0.0.1    DIAMETER 128 Device-Watchdog Request | 
+  308  38.120098    127.0.0.1 → 127.0.0.1    DIAMETER 136 Device-Watchdog Answer | 
+  310  44.137662    127.0.0.1 → 127.0.0.1    DIAMETER 128 Device-Watchdog Request | 
+  312  44.138804    127.0.0.1 → 127.0.0.1    DIAMETER 136 Device-Watchdog Answer | 
+  314  50.150538    127.0.0.1 → 127.0.0.1    DIAMETER 128 Device-Watchdog Request | 
+  316  50.151440    127.0.0.1 → 127.0.0.1    DIAMETER 136 Device-Watchdog Answer | 

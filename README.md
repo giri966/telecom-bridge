@@ -285,34 +285,41 @@ To reproduce:
 
 ## Packet capture
 
-[`transaction_flow.pcap`](transaction_flow.pcap) contains 162 frames with no checksum
-errors: the CER/CEA handshake, 13 CCR with 12 CCA, three DWR/DWA watchdog exchanges, and
-the REST call that drove each transaction. A decoded listing is in
-[`docs/transaction_flow-summary.txt`](docs/transaction_flow-summary.txt). Open it in
-Wireshark with the display filter `diameter || http`.
+Two captures are included, both taken with `dumpcap` on the Npcap loopback adapter.
 
-Each transaction appears as four frames:
+| File | Contents |
+|---|---|
+| [`transaction_flow.pcap`](transaction_flow.pcap) | 317 frames: the CER/CEA handshake, 13 CCR with 12 CCA, six DWR/DWA watchdog exchanges, and the REST call behind each transaction |
+| [`docs/load-window.pcap`](docs/load-window.pcap) | 61 002 frames, a 61-second window of sustained 100 TPS holding 6 094 CCR and 6 087 CCA |
+
+Open either in Wireshark and apply the display filter `diameter || http`. A decoded
+listing of the first file, produced by `tshark`, is in
+[`docs/transaction_flow-summary.txt`](docs/transaction_flow-summary.txt).
+
+The gateway runs on port **8088** for these captures. That port is in Wireshark's default
+HTTP port list, so the REST side dissects as HTTP with no *Decode As* step, and Diameter is
+recognised on 3868 automatically. Each transaction reads as four frames:
 
 ```
-  25   0.502  127.0.0.1:10292 -> 127.0.0.1:8082  HTTP      POST /api/v1/charge HTTP/1.1
-  26   0.592  127.0.0.1:10289 -> 127.0.0.1:3868  DIAMETER  CCR  app=4 hbh=0x728797a2 Type=INITIAL_REQUEST MSISDN=919876543201
-  27   0.679  127.0.0.1:3868 -> 127.0.0.1:10289  DIAMETER  CCA  app=4 hbh=0x728797a2 Result-Code=2001 DIAMETER_SUCCESS
-  35   0.743  127.0.0.1:10292 -> 127.0.0.1:8082  HTTP      HTTP/1.1 200 OK
+ 93  11.254087   ::1 → ::1              HTTP/JSON  POST /api/v1/charge HTTP/1.1 , JSON
+ 95  11.447110   127.0.0.1 → 127.0.0.1  DIAMETER   Credit-Control Request
+ 97  11.537958   127.0.0.1 → 127.0.0.1  DIAMETER   Credit-Control Answer
+ 99  11.556393   ::1 → ::1              HTTP/JSON  HTTP/1.1 200 OK , JSON
 ```
 
-**How it was recorded.** Capturing loopback traffic on Windows requires Npcap or `pktmon`,
-both of which need administrator rights that were not available on the build machine. The
-gateway can therefore record its own traffic: pass `--capture.file=...` and a tap sits
-first in both Netty pipelines. The payload bytes and timestamps are real, exactly what the
-sockets carried; the Ethernet, IP and TCP headers around them are generated, with
-consistent sequence numbers and checksums so Wireshark reassembles the streams and its
-dissectors work normally. It is an accurate record of the protocol exchange rather than a
-`tcpdump` of the wire.
+Neither capture contains a single malformed frame, which is Wireshark's own dissector
+confirming the header lengths and 4-byte AVP padding are right. `dumpcap` also reported
+zero packets dropped in both, including at 100 TPS.
 
 ```bash
-./scripts/capture-transaction-flow.sh          # regenerate the capture
-sudo ./scripts/capture-pcap.sh 60              # or take a real tcpdump capture instead
+./scripts/capture-wireshark.sh          # retake both captures
 ```
+
+The gateway can also record its own traffic without Wireshark, via
+`--capture.file=...` and `scripts/capture-transaction-flow.sh`, which is useful on a
+machine where installing a capture driver is not an option. Files produced that way carry
+the real payloads with generated TCP/IP headers; the two committed captures are not
+generated that way, they are genuine `dumpcap` captures.
 
 ## Simulator
 

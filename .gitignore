@@ -12,3 +12,4 @@ load-test-report-*.txt
 *.pcap
 !transaction_flow.pcap
 !docs/transaction_flow.pcap
+!docs/load-window.pcap
